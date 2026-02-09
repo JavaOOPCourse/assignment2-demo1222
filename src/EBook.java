@@ -1,16 +1,20 @@
 public class EBook extends Book {
 
-    private double fileSize;
+    private double fileSize; // in MB
 
-    // TODO: Implement constructor using super()
+    // Constructor using super()
     public EBook(String title, String author, int year, double fileSize) {
         super(title, author, year);
-        // implement
+        this.fileSize = fileSize;
     }
 
-    // TODO: Override toString()
+    // Override toString()
     @Override
     public String toString() {
-        return "";
+        return "[E-Book] Title: " + getTitle()
+                + ", Author: " + getAuthor()
+                + ", Year: " + getYear()
+                + ", File Size: " + fileSize + "MB"
+                + ", Available: " + isAvailable();
     }
 }
